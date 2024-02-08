@@ -1,0 +1,93 @@
+<h2> Date Pipe Demo</h2>
+
+<div>
+  <p>Today's Date (Defeault): {{presentDate}}</p>
+  <p>Short Date: {{presentDate | date:'shortDate'}}</p>
+  <p> Medium Date: {{presentDate | date:'mediumDate'}}</p>
+  <p> Long Date: {{presentDate | date:'longDate'}}</p>
+
+</div>
+
+<br>
+
+<h3> Date with Parameters</h3>
+<div>
+  <h2> Number Format Pipes </h2>
+  <p> Formatted Date: {{presentDate | date: 'M/dd/yyy'}}</p>
+  <p> Hours and Minutes: {{presentDate | date: 'h:m'}}</p>
+
+</div>
+
+<hr>
+
+<br/>
+
+
+<h2>Chained Pipe Demo</h2>
+<div>
+  <h2> Text Format Pipes </h2>
+  Date with uppercase :- {{presentDate | date:'fullDate' | uppercase}} <br/>
+  Date with lowercase :- {{presentDate | date:'medium' | lowercase}} <br/>
+
+</div>
+
+<hr>
+
+<h2>Async Pipe</h2>
+<div> 
+  Seconds changing in Time: {{ time$ | async | date:'mediumTime' }}  <br/>
+</div>
+
+<hr>
+
+<h2>Currency Pipe</h2>
+<div> 
+  <p>{{ price | currency:'':true }}</p>  <br/>
+  <p>{{ price | currency:'':false }}</p>  <br/>
+  <p>{{ price | currency:'INR' }}</p>  <br/>
+
+</div>
+
+<hr>
+
+<h2>Slice Pipe</h2>
+<div> 
+  <h3>Start Index :- {{Fruits | slice:2 }}</h3>
+  <h4> Start and end index :- {{Fruits | slice:1:4}} </h4> 
+  <h5>Negative index:- {{Fruits | slice:-2}}</h5>
+  <h5>Negative start and end index:- {{Fruits | slice:-4:-2}}</h5>
+</div>
+
+<hr>
+
+
+<h3> Decimal Pipe</h3>
+<div>
+    <p> {{decimalNum1 | number}} </p> 
+    <p>{{decimalNum2  | number}}</p>
+</div>
+
+<hr>
+
+
+
+
+<h3> JSON Pipe</h3>
+<div>
+  <p>{{ data | json }}</p>
+</div>
+<hr>
+
+
+
+<h3>Percent Pipes</h3>
+<div>
+  <p>A: {{ a | percent }}</p>
+  <p>B: {{ b | percent: '4.3-5' }}</p>
+  <p>B: {{ b | percent: '4.3-5' : 'fr' }}</p>
+</div>
+
+
+
+
+
